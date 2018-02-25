@@ -5,6 +5,7 @@ const logger       = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser   = require('body-parser');
 const layouts      = require('express-ejs-layouts');
+const cors         = require('cors');
 const mongoose     = require('mongoose');
 const session      = require('express-session');
 const MongoStore   = require('connect-mongo')(session);
@@ -15,6 +16,7 @@ mongoose.connect('mongodb://localhost/forum-development');
 
 const app = express();
 
+app.use(cors());
 app.use(session({
   secret: "forum-app",
   resave: true,
