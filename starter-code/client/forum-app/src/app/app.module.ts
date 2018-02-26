@@ -6,6 +6,7 @@ import { routes } from './routes';
 
 import { AppComponent } from './app.component';
 import { ThreadsComponent } from './threads/threads.component';
+import { AuthGetService } from './services/auth-get.service';
 
 
 @NgModule({
